@@ -1,0 +1,484 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700');
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded:400,700');
+@import url('https://fonts.googleapis.com/css?family=Asar');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+body{
+	font-family: 'Encode Sans Semi Expanded', sans-serif;
+	font-weight: 400;
+}
+p{
+	font-size: 1em;
+	line-height: 1.4em;
+}
+
+/**INTRO SLIDER**/
+section{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+section nav#liens{
+	text-align: right;
+	position: relative;
+	z-index: 10;
+	padding-top: 3vh;
+	height: initial;
+	color: #fff;
+	background: none;
+	box-shadow: none;
+}
+section nav#liens a{
+	color: #fff;
+	font-weight: 300;
+	text-decoration: none;
+}
+section nav#liens a:nth-child(1):hover{
+	opacity: 0.7;
+}
+section nav#liens a:nth-child(1){
+	margin-right: 25px;
+	border-bottom: 1px solid #fff;
+	transition-duration: 0.4s;
+}
+section nav#liens a.langueactive{
+	font-weight: 700;
+}
+section div:first-child{
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	z-index: 0;
+}
+section div:first-child img{
+	width: auto;
+	height: 110vh;
+}
+section div#masque{
+	position: absolute;
+	z-index: 10;
+	bottom: 0;
+	width: 100%;
+	height: 25vh;
+	background-image: url('../images/masque_slider.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-color: transparent;
+}
+section div#intro_slider{
+	width: 32%;
+	margin: 12vh auto 10vh auto;
+	z-index: 10;
+	position: relative;
+	text-align: center;
+}
+section div#intro_slider h1{
+	color: #fff;
+	font-family: 'Asar', serif;
+	font-size: 2.5em;
+	line-height: 1em;
+} 
+section div#intro_slider h1 span{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 0.6em;
+}
+section div#intro_slider img{
+	width: auto;
+	height: 18vh;
+	display: block;
+	margin: auto;
+}
+section div#intro_slider p{
+	color: #fff;
+	margin-top: 7vh;
+	font-weight: 300;
+}
+section div#intro_slider p>span{
+	font-weight: 700;
+}
+section div#intro_slider a{
+	margin-top: 7vh;
+}
+section div#nav_slider{
+	z-index: 10;
+	position: relative;
+	width: 80px;
+	height: 15px;
+	margin: auto;
+}
+section div#nav_slider a div{
+	background-color: rgba(255,255,255,0.5);
+	border:2px solid #fff;
+	border-radius: 50%;
+	height: 11px;
+	width: 11px;
+	position: absolute;
+}
+section div#nav_slider a:nth-child(2) div{
+	left: 32.5px;
+}
+section div#nav_slider a:nth-child(3) div{
+	left: 65px;
+}
+section div#nav_slider a div.rondactive{
+	background-color: rgba(255,255,255,1);
+}
+
+/**TIMELINE NAVIGATION**/
+nav{
+	height: 10vh;
+	width: 84%;
+	margin-bottom: 8vh;
+	padding-right: 8%;
+	padding-left: 8%;
+	background-color: #fff;
+	box-shadow: 0 0 25px 8px rgba(0,0,0,0.1);
+}
+nav img{
+	height: 6vh;
+	float: left;
+	margin-top: 2vh;
+}
+nav div#timeline{
+	width: 72%;
+	margin-left: 4%;
+	margin-right: 4%;
+	float: left;
+}
+nav div#timeline>div{
+	height: 2px;
+	width: 100%;
+	background-color: #d2d2d2;
+	margin-top: 6.5vh;
+	position: relative;
+	cursor: pointer;
+}
+nav div#timeline>div a div{
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+	background-color: #d2d2D2;
+	position: absolute;
+	top:-4px;
+	text-align: center;
+	z-index: 20; 
+}
+nav div#timeline>div a:hover div, nav div#timeline> div a.timeline_active div{
+	background-color: #81d84e;
+	transition-duration: 0.6s;
+}
+nav div#timeline>div a:hover div:before, nav div#timeline> div a.timeline_active div:before{
+	color: #81d84e;
+	transition-duration: 0.6s;
+}
+nav div#timeline>div a div:before{
+	text-transform: uppercase;
+	position: absolute;
+	transform: translate(-50%,0%);
+	font-size: 12px;
+	top: -23px;
+	color: #d2d2d2;
+	min-width: 9em;
+}
+nav div#timeline>div a:nth-child(1) div:before{
+	content: "la création";
+}
+nav div#timeline>div a:nth-child(1) div{
+	left: 12%;
+}
+nav div#timeline>div a:nth-child(2) div:before{
+	content: "les évolutions";
+}
+nav div#timeline>div a:nth-child(2) div{
+	left: 37%;
+}
+nav div#timeline>div a:nth-child(3) div:before{
+	content: "de nos jours";
+}
+nav div#timeline>div a:nth-child(3) div{
+	left: 62%;
+}
+nav div#timeline>div a:nth-child(4) div:before{
+	content: "projets futur";
+}
+nav div#timeline>div a:nth-child(4) div{
+	left: 87%;
+}
+nav div#timeline>div div#progress{
+	position: absolute;
+	width: 12%;
+	height: 2px;
+	background-color: #81d84e;
+	z-index: 10;
+}
+nav div#langues{
+	width: 8%;
+	float: left;
+	margin-top: 4vh;
+	font-size: 0.9em;
+	text-align: right;
+}
+nav div#langues a, nav div#langues{
+	text-decoration: none;
+	color: #d2d2d2;
+}
+nav div#langues a.langueactive{
+	font-weight: 700;
+	color: #263640;
+}
+
+/**MAIN**/
+main{
+	clear: left;
+	width: 100%;
+	height: auto;
+}
+header{
+	width: 100%;
+}
+header h2, body#evolution h1, body#denosjours h1{
+	text-align: center;
+	font-weight: 400;
+	font-size: 1.2em;
+	color: #aaadb0;
+}
+header h2::first-line, body#evolution h1::first-line, body#denosjours h1::first-line{
+	font-family: 'Playfair Display', serif;
+	font-size:3em;
+	font-weight: 700;
+	color: #263640;
+}
+main article{
+	clear: left;
+	width: 100%;
+}
+main article p{
+	color: #263640;
+	margin: 5vh 0;
+}
+main article h3, body#evolution h2, body#denosjours h2{
+	font-family: 'Playfair Display', serif;
+	font-size:29px;
+	font-weight: 700;
+	color: #263640;
+	position: relative;
+	width: fit-content;
+}
+main article h3::after, body#evolution h2::after, body#denosjours h2::after{
+	width: 52px;
+	height: 23px;
+	background-color: #b3e895;
+	content: "";
+	position: absolute;
+	bottom: -7px;
+	right: -14px;
+	z-index: -1;
+}
+main article.left{
+	margin-left:8%;
+}
+main article.left div{
+	width: 32%;
+	margin-top: 18vh;
+	float: left;
+}
+main article.left img{
+	float: left;
+	margin-left: 5%;
+	width: 55%;
+	height: auto;
+}
+main article.right{
+	clear: left;
+	margin-right:8%;
+}
+main article.right div{
+	width: 32%;
+	float: left; 
+	margin-top: 18vh;
+}
+main article.right img{
+	width: 55%;
+	height: auto;
+	margin-right: 5%;
+	float: left;
+}
+main article.center{
+	margin: auto;
+	width: 82%;
+	padding-top: 10vh;
+}
+main article.center a{
+	cursor: pointer;	
+}
+main article.center div{
+	width: 55%;
+}
+main article.center a div.acteurs{	
+	text-align: center;
+	width: 22%;
+	float:left;
+	margin: 5vh 2% 0 2%;
+}
+main article.center a div.acteurs:hover{
+	opacity:0.7;
+	transition-duration: 0.4s;
+}	
+main article.center a div.acteurs > img{
+	height: 250px;
+	width: auto;
+}
+main article.center a:nth-child(2) div.acteurs, main article.center a:nth-child(5) div.acteurs{
+	margin-left: 0;
+}
+main article.center a div.acteurs > p > span{
+	font-weight: 700;
+}
+main article.center a div{
+	width: 50%;
+}
+main article.center img#infographie{
+	max-width: 100%;
+	margin: 0;
+}
+main article.center p#citation{
+	font-family: 'Playfair Display', serif;
+	font-weight: 600;
+	font-size: 1.3em;
+	width: 70%;
+	text-align: center;
+	margin: -1vh auto 8vh auto;
+}
+
+
+/**FOOTER**/
+div#prefooter{
+	clear: left;
+	height: 80vh;
+	text-align: center;
+	padding: 8vh 0 5vh 0;
+	background-size: cover;
+	background-position: bottom;
+	background-image: url(../images/footer_creation.jpg);
+}
+body#evolution div#prefooter{
+	background-image: url(../images/evolution_footer.jpg);
+	padding: 8vh 16% 8vh 16%;
+}
+body#denosjours div#prefooter{
+	background-image: url(../images/auj_footer.jpg);
+	padding: 5vh 16% 12vh 16%;
+}
+h4, body#evolution h3, body#denosjours h3{
+	font-family: 'Playfair Display', serif;
+	font-weight: 600;
+	font-size: 1.8em;
+	text-align: center;
+	display: block;
+	width: 65%;
+	margin: auto;
+}
+div#prefooter a{
+	margin-top: 5vh;
+}
+footer{
+    width: 100%;
+  	margin-top:-9vh;
+  	height: 9vh;
+  	color: #fff;
+  	text-align: center;
+  	font-size: 0.9em;
+}
+footer p{
+	width: 38%;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: left;
+	font-weight: 300;
+}
+footer img{
+	height: 7vh;
+	width: auto;
+	display: inline-block;
+	vertical-align: middle;
+}
+footer ul li{
+	display: inline-block;
+	vertical-align: middle;
+}
+footer ul{
+	display: inline-block;
+	width: 38%;
+	text-align: right;
+	font-weight: 300;
+}
+footer ul a {
+	text-decoration: none;
+	color: #fff;
+}
+
+/**HOVER BTN**/
+.btn_cadre{
+	border: 2px solid #263640;
+	padding: 8px 30px;
+	color: #263640;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	webkit-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+	width: auto;
+	display: inline-block;
+	text-decoration: none;
+}
+.btn_cadre::before{
+	position: absolute;
+	left: -100%;
+	top: -5%;
+	width: 100%;
+	height: 110%;
+	content: ' ';
+	z-index: -1;
+	background-color: #263640;
+	webkit-transition: left 0.3s ease-in-out;
+	transition: left 0.3s ease-in-out;
+}
+.btn_cadre:hover::before, .btn_cadre:active::before{
+	left: 0%;
+}
+.btn_cadre:hover{
+	color: #fff;
+}
+#intro_slider .btn_cadre{
+	border-color: #fff;
+	color: #fff;
+}
+#intro_slider .btn_cadre::before{
+	background-color: #fff;
+}
+#intro_slider .btn_cadre:hover{
+	color: #263640;
+}
+
+
+/**CARTE**/
+#animation_container {
+	width: 55%;
+	margin-right: 5%;
+	position: relative;
+	margin-top: 9vh;
+}
+#animation_container canvas{
+	width: 100%;
+}
+#animation_container img{
+	position: absolute;
+	width: 100%;
+}
